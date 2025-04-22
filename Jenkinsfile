@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SONARQUBE_PORT = '9005'
-        NGINX_PORT = '8080'
+        NGINX_PORT = '90'
         TOMCAT_PORT = '8083'
     }
 
