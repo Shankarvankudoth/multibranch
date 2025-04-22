@@ -11,7 +11,7 @@ pipeline {
         stage('Start SonarQube') {
             steps {
                 sh '''
-                docker run -d --name sonar \
+                docker run -d --name sonar-dev-b \
                     -p ${SONARQUBE_PORT}:9000 \
                     sonarqube:latest
                 '''
@@ -21,7 +21,7 @@ pipeline {
         stage('Start NGINX') {
             steps {
                 sh '''
-                docker run -d --name my-nginx \
+                docker run -d --name my-nginx-dev-b \
                     -p ${NGINX_PORT}:80 \
                     nginx:latest
                 '''
@@ -31,7 +31,7 @@ pipeline {
         stage('Start Tomcat') {
             steps {
                 sh '''
-                docker run -d --name my-tomcat \
+                docker run -d --name my-tomcat-dev-b \
                     -p ${TOMCAT_PORT}:8080 \
                     tomcat:latest
                 '''
