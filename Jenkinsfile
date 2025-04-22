@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE_PORT = '9005'
+        SONARQUBE_PORT = '9006'
         NGINX_PORT = '90'
         TOMCAT_PORT = '8083'
     }
